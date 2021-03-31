@@ -1,6 +1,6 @@
 #!/bin/awk -f
-# Description: give a grm with format: animal_i animal_j grm_relationship with only zero grm_relationships, add zeros grm combinations
-# Assumptions: 1st element of last raw is the max ID number in grm.
+# Description: give a grm with format: animal_i animal_j grm_relationship with only non-zero grm_relationships, add zeros grm combinations
+# Assumptions: 1st element of last raw is the max ID number in grm. TO DO: store the highest ID number between col1/col2 at each line
 # Usage: awk -f add_zeros_grm.awk input.grm > output.grm
 
 {grm[$1][$2]=$3} END {
